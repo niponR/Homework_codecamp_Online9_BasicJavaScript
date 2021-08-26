@@ -1,0 +1,51 @@
+<script>
+    // 1.
+    function draw(n) {
+        let star = ''
+        for(let i = 0; i < n; i++) {
+            star = star + '*'
+        }
+        console.log(star)
+    }
+
+    //2.
+    function draw(n) {
+        let star = ''
+        for(let colum = 0; colum < n; colum++) {
+            star = star + '*'     
+        } 
+        for(let row = 0; row < n; row++){
+            console.log(star)
+        }
+    }
+
+    // 3.
+    function draw(n) {
+        var output=""
+        var count = 0
+        for(var colum = 1; colum <= n; colum++){
+                output += (count+1);
+                count ++;    
+        }for(let row = 0; row < n; row++){
+            console.log(output)
+        }
+    }
+
+    // 4.
+    function draw(n) {
+        var output=""
+        var count = 0
+        for(var colum = 1; colum <= n; colum++){
+                output += (count+1);
+               // count ++;    
+        }for(let row = 0; row < n; row++){
+            output += (count+1);
+           // count ++;  
+
+            console.log(output)
+        }
+       
+    }
+    
+</script>
+

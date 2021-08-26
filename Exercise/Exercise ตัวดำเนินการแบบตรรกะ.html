@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise ตัวดำเนินการแบบตรรกะ</title>
+</head>
+<body>
+    <script>
+/* 
+        1. คำสั่งต่อไปนี้จะแสดงค่าเป็นอะไร
+
+            alert( null || 2 || undefined );
+                ตอบ 2
+
+            alert( alert(1) || 2 || alert(3) );
+                ตอบ 1
+
+            alert( 1 && null && 2 );
+                ตอบ null
+
+            alert( alert(1) && alert(2) );
+                ตอบ 1 , undefined
+
+            alert( null || 2 && 3 || 4 );
+                ตอบ 3
+
+
+*/
+
+// 2. เขียนคำสั่ง if ที่เช็คอายุว่าอยู่ระหว่าง 18 - 60
+var age = prompt('ใส่อายุ : ');
+if(age >= 18 && age <= 80) {
+    console.log("อายุคุณอยู่ระหว่าง 18 - 60 ปี")
+}
+
+// 3. เขียนคำสั่ง if ที่เช็คอายุว่าไม่อยู่ระหว่าง 18 - 60
+var age = prompt('ใส่อายุ : ');
+if(age < 18 || age > 80) {
+    console.log("อายุคุณไม่อยู่ระหว่าง 18 - 60 ปี")
+}
+
+//4. คำสั่ง alert ไหนที่จะถูกรันบ้าง
+//if (-1 || 0) alert( 'first' );
+//if (-1 && 0) alert( 'second' );
+//if (null || -1 && 0) alert( 'third' );
+    //ตอบ คำสั่งแรก
+
+
+
+//5. ให้เขียนระบบ login
+var userName = prompt("คุณเป็นใคร :")
+if(userName === "Admin") {
+    var passWord = prompt("ใส่รหัสผ่าน")
+        if(passWord === "codecamp#5") {
+            alert("ยินดีต้อนรับ")
+        } else if (passWord === "" || passWord === null) {
+            alert("ยกเลิก")
+        } else {
+            alert("Wrong password")
+        }
+
+} else if (userName === "" || userName === null ) {
+    alert("ยกเลิก")
+
+} else {
+    alert("ผมไม่รู้จักคุณ");
+}
+
+    </script>
+</body>
+</html>
